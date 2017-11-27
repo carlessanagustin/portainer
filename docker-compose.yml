@@ -8,7 +8,7 @@ services:
   portainer:
     image: portainer/portainer
     restart: always
-    command: --ssl --sslcert /certs/https.crt --sslkey /certs/https.key
+    command: "--admin-password '$$2y$$05$$M0jtt60wtb1Xx/XM3J1huefr2yxlpAB5hSBqxcttOvdTta6sibfEq' --ssl --sslcert /certs/https.crt --sslkey /certs/https.key"
     ports:
       - "9000:9000"
     volumes:

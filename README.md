@@ -10,10 +10,9 @@
 * Create & start: `./create_start.sh`
 * Start: `./start.sh`
 * Stop: `./stop.sh`
+* Default password: test12345678
 
 ## Usage: Shell script
-
-https://portainer.readthedocs.io/en/stable/configuration.html#admin-password
 
 ```shell
 PASSWORD=my_password_here
@@ -27,3 +26,5 @@ docker run -d -p 9000:9000 \
     - ./certs:/certs \
     portainer/portainer --admin-password $PASS --ssl --sslcert /certs/https.crt --sslkey /certs/https.key
 ```
+
+* More info: https://portainer.readthedocs.io/en/stable/configuration.html#admin-password

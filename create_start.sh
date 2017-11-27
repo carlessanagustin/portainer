@@ -1,6 +1,8 @@
 #!/bin/bash
 
-wget https://gist.githubusercontent.com/carlessanagustin/dc8e6a47be27faaa3dbf99caa2a89458/raw/5d6a80af5f6c802ad772f64a89ba853cdb080f8e/create_keys.sh
+GIST="https://gist.githubusercontent.com/carlessanagustin/dc8e6a47be27faaa3dbf99caa2a89458/raw/a524a6f7a082e5e0da7b368ff8f01a6c8bfb99d1/create_keys.sh"
+
+wget $GIST
 /bin/bash create_keys.sh
 
 /bin/bash ./start.sh
