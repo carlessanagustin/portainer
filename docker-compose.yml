@@ -6,9 +6,11 @@ volumes:
 services:
 
   portainer:
-    image: portainer/portainer
+    image: portainer/portainer:1.16.2
+    #image: portainer/portainer:latest
     restart: always
-    command: "--admin-password '$$2y$$05$$M0jtt60wtb1Xx/XM3J1huefr2yxlpAB5hSBqxcttOvdTta6sibfEq' --ssl --sslcert /certs/https.crt --sslkey /certs/https.key"
+    command: "--ssl --sslcert /certs/https.crt --sslkey /certs/https.key"
+    #command: "--admin-password '$2y$05$ax8adW5febFVXBHFaNWr1OnczpYvNvB664s1PrzyWqb/soThv/thS'"
     ports:
       - "9000:9000"
     volumes:
