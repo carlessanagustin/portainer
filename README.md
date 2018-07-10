@@ -16,14 +16,14 @@
 * Option 1
 
 ```shell
-PASSWORD=my_password_here
+PASSWORD=$(pwgen 25 1)
 docker run --rm httpd:2.4-alpine htpasswd -nbB admin $PASSWORD | cut -d ":" -f 2
 ```
 
 * Option 2
 
 ```shell
-PASSWORD=my_password_here
+PASSWORD=$(pwgen 25 1)
 htpasswd -nb -B admin $PASSWORD | cut -d ":" -f 2
 ```
 
